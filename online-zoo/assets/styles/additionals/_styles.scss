@@ -1,0 +1,165 @@
+@import "variables";
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  position: relative;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  position: relative;
+
+  // preload green arrows
+  body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1; 
+    content:url(../../images/left_active.png) url(../../images/right_active.png);   
+ }
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 114px;
+  line-height: 80%;
+  text-transform: uppercase;
+  color:#FFFFFF;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: $color-black-blue;
+}
+
+.button {
+  position: relative;
+  width: 298px;
+  height: 54px;
+  background: $color-orange-btn;
+  background-image: $color-orange-gradient;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+
+  &:hover {
+
+    background: $color-hover;
+  }
+
+  &:active {
+    transition: background 0.1s;
+    background: $color-active;
+  }
+
+  &:disabled {
+    background: $color-disabled;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.orange__text {
+  color: $color-orange;
+}
+
+.select__menu__item {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  cursor: default;
+  pointer-events: none;
+  z-index: 1;
+  font-weight: 600;
+
+  @media screen and (max-width: 640px) {
+    pointer-events:all;
+    cursor: pointer;
+  }
+}
+
+.substrate__menu {
+position: absolute;
+visibility: hidden;
+transition: 1.3s;
+}
+
+.active__substrate__menu {
+  visibility: visible;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vh;
+  height: 100vh;
+  background: rgba(#000000,0.5);
+  transition: 1.3s;
+  z-index: -1;
+}
+
+.substrate__testimonial {
+  position: absolute;
+  visibility: hidden;
+  transition: 1.3s;
+  }
+  
+  .active__substrate__testimonial {
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    background: rgba(#000000,0.5);
+    transition: 1.3s;
+    z-index: 50;
+  }

@@ -1,0 +1,18 @@
+@import "../main/footer";
+
+@media screen and (max-width: 1000px) {
+.footer .footer__wrapper .footers__links__wrapper .navigation .menu {
+    margin-left: 25px;
+}
+}
+
+@media screen and (max-width: 999px) {
+  .footer .footer__wrapper .footers__links__wrapper .navigation .menu {
+      margin-left: 1px;
+  }
+  }
+  @media screen and (max-width: 320px) {
+    .footer .footer__wrapper .footers__links__wrapper .navigation .menu {
+        margin-left: 20px;
+    }
+    }

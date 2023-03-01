@@ -1,0 +1,32 @@
+
+.watch {
+  background: url("../../assets/images/Giant_Panda_donate.png") center / cover no-repeat;
+  width: 100%;
+  height: 387px;
+  margin-top: 79px;
+
+  @media screen and (max-width: 1000px) {
+    height: 390px;
+    background: url("../../assets/images/Giant_Panda_donate.png") no-repeat;
+    background-position: 28.4%;
+  }
+  @media screen and (max-width: 1000px) {
+    height: 390px;
+    background: url("../../assets/images/Giant_Panda_donate.png") no-repeat;
+    background-position: 28.4%;
+  }
+  @media screen and (max-width: 640px) {
+    margin-top: 34px;
+    height: 335px;
+    background: url("../../assets/images/Giant_Panda_donate.png") center no-repeat;
+    background-position: 37% 70%;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 639px) {
+    height: calc(187px + (334 - 187) * ((100vw - 320px) / (639 - 320)));
+    background: url("../../assets/images/Giant_Panda_donate.png") center no-repeat;
+    background-position: 33.5%;
+    background-size: cover;
+  }
+}
